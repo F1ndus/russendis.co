@@ -5,10 +5,14 @@
     <meta name="googlebot" content="noindex">
     <title>Russendisco</title>
     <link href="style.css" type="text/css" rel="stylesheet">
+    <script
+            src="https://code.jquery.com/jquery-3.1.1.min.js"
+            integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+            crossorigin="anonymous"></script>
 </head>
 <body class="no-margin">
 <div class="shadow bold">
-    <div class=""><pre class="">
+    <div id="header" class=""><pre class="">
   _____                          _____  _                
  |  __ \                        |  __ \(_)               
  | |__) |   _ ___ ___  ___ _ __ | |  | |_  ___ ___ ___   
@@ -26,9 +30,19 @@
     <source src="http://webm.land/media/tmp/a7ead896-85de-4693-b830-19bda96b8c46.webm" type="video/mp4">
 </video>
 <script>
-
-        setInterval( function(){ document.title == "BREEKI" ? document.title = "\u205f​​​\u205f​​​\u205f​​​\u205f​​​\u205f​​​\u205f​​​\u205f​​​\u205f​​​\u205f​​​CHEEKI" : document.title = "BREEKI" }, 80);
-
+    setInterval( function(){ document.title == "BREEKI" ? document.title = "\u205f​​​\u205f​​​\u205f​​​\u205f​​​\u205f​​​\u205f​​​\u205f​​​\u205f​​​\u205f​​​CHEEKI" : document.title = "BREEKI" }, 80);
+    jQuery.fn.shake = function() {
+        this.each(function (i) {
+            $(this).css({"position": "relative"});
+            for (var x = 1; x <= 3; x++) {
+                $(this).animate({left: -25}, 5).animate({left: 0}, 10).animate({left: 25}, 5).animate({left: 0}, 10);
+            }
+        });
+        return this;
+    }
+    setInterval( function () {
+        $("#header").shake();
+    },500);
 </script>
 </body>
 </html>

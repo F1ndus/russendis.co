@@ -3,6 +3,7 @@ body {
   color: #1dadb0;
   font-family: monospace;
   padding: 5px;
+  overflow: hidden;
 }
 
 .bold {
