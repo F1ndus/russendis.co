@@ -1,0 +1,2 @@
+#!/bin/bash
+pscp  ./* findus@f1ndus.de:/var/www/virtual/findus/russendis.co/
